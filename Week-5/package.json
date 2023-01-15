@@ -1,0 +1,16 @@
+{
+  "name": "week-5",
+  "version": "1.0.0",
+  "description": "package for week5 assignment",
+  "main": "5.4.js",
+  "dependencies": {
+    "jest": "^29.3.1",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Lohith",
+  "license": "ISC"
+}
