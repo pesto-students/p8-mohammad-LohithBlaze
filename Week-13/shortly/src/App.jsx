@@ -79,6 +79,7 @@ function App() {
           </article>
         </section>)
       }
+      <button onClick={() => methodDoesNotExist()}>Break the world</button>;
     </>
   )
 }
