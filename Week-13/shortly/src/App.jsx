@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import ReactGA from 'react-ga';
 // import './App.css';
 import axios from "axios";
 import heroImage from "./assets/illustration-working.svg";
 
+ReactGA.initialize('UA-12345678-1');
 
 function CopyButton({ text }) {
   const [buttonText, setButtonText] = useState("Copy");
@@ -13,7 +15,13 @@ function CopyButton({ text }) {
     setButtonClass("contrast");
     console.log(text);
     navigator.clipboard.writeText(text);
+    ReactGA.event({
+      category: 'Button',
+      action: 'Copy Link',
+      label: 'Shortened Link',
+    });
   }}>{buttonText}</button>;
+
 }
 
 function App() {
